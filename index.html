@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Почта: напиши письмо</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+    <div class="container">
+
+        <section class="letter-section">
+            <h2>Почта: напиши письмо</h2>
+
+            <!-- Поле ввода -->
+            <textarea id="input" placeholder="Введите текст письма..."></textarea>
+
+            <!-- Тема письма -->
+            <p class="label">Тема письма:</p>
+            <div class="btns">
+                <button data-theme="light">Базовый</button>
+                <button data-theme="dark">Тёмный</button>
+                <button data-theme="blue">Гламурный</button>
+            </div>
+
+            <!-- Действия -->
+            <div class="btns">
+                <button id="sendBtn" class="primary">Отправить письмо</button>
+                <button id="clearBtn">Очистить</button>
+            </div>
+
+            <!-- Результат -->
+            <div id="result" class="result">Здесь появится отправленное письмо</div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

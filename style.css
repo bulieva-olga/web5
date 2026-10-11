@@ -1,0 +1,215 @@
+/* ===== СБРОС ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px 20px;
+    min-height: 100vh;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ===== КОНТЕЙНЕР ===== */
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ===== СЕКЦИЯ ===== */
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 15px;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* ===== TEXTAREA ===== */
+textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+    transition: border-color 0.3s, background 0.3s, color 0.3s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #7aa7ff;
+}
+
+/* ===== ПОДПИСЬ ===== */
+.label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* ===== КНОПКИ ===== */
+.btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid currentColor;
+    background: transparent;
+    color: inherit;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+button.primary {
+    background: #7aa7ff;
+    border-color: #7aa7ff;
+    color: white;
+}
+
+button.primary:hover {
+    background: #5588dd;
+    border-color: #5588dd;
+}
+
+/* ===== РЕЗУЛЬТАТ ===== */
+.result {
+    margin-top: 10px;
+    padding: 20px;
+    border-left: 4px solid #7aa7ff;
+    border-radius: 8px;
+    font-style: italic;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+/* ======================================================
+   ТЕМЫ
+   ====================================================== */
+
+/* --- БАЗОВАЯ --- */
+body.light {
+    background: #f0f0f0;
+    color: #333;
+}
+
+body.light section {
+    background: #ffffff;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light button {
+    border-color: #333;
+    color: #333;
+}
+
+body.light button:hover {
+    background: #333;
+    color: #fff;
+}
+
+body.light .result {
+    background: rgba(0, 0, 0, 0.05);
+    border-left-color: #7aa7ff;
+}
+
+/* --- ТЁМНАЯ --- */
+body.dark {
+    background: #1a252f;
+    color: #ecf0f1;
+}
+
+body.dark section {
+    background: #2c3e50;
+    color: #ecf0f1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.dark textarea {
+    background: #1a252f;
+    color: #ecf0f1;
+    border-color: #4a6278;
+}
+
+body.dark textarea::placeholder {
+    color: #8899aa;
+}
+
+body.dark button {
+    border-color: #ecf0f1;
+    color: #ecf0f1;
+}
+
+body.dark button:hover {
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+body.dark .result {
+    background: rgba(255, 255, 255, 0.05);
+    border-left-color: #7aa7ff;
+}
+
+/* --- ГЛАМУРНАЯ --- */
+body.blue {
+    background: #eea6dc;
+    color: #ffffff;
+}
+
+body.blue section {
+    background: #b96cc8;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(185, 108, 200, 0.5);
+}
+
+body.blue textarea {
+    background: #fce4ec;
+    color: #333;
+    border-color: #c3baff;
+}
+
+body.blue button {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+body.blue button:hover {
+    background: #ffffff;
+    color: #b96cc8;
+}
+
+body.blue .result {
+    background: rgba(255, 255, 255, 0.15);
+    border-left-color: #ffffff;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 600px) {
+    section {
+        padding: 25px 20px;
+    }
+
+    button {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+    }
+}
